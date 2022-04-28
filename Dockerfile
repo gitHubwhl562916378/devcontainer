@@ -28,4 +28,6 @@ COPY remote/vs-code-extensiton /tmp/vs-code-extensiton
 #you cat get id from vscode abort
 Run mv /root/.vscode-server/bin/vscode-server-linux-x64 /root/.vscode-server/bin/e18005f0f1b33c29e81d732535d8c0e47cafb0b5 && \
     cd /root/.vscode-server/bin/e18005f0f1b33c29e81d732535d8c0e47cafb0b5/bin && \
-    for plugin in $(ls /tmp/vs-code-extensiton);do ./code-server --install-extension /tmp/vs-code-extensiton/$plugin;done
+    for plugin in $(ls /tmp/vs-code-extensiton);do ./code-server --install-extension /tmp/vs-code-extensiton/$plugin;done && \
+    rm -r /tmp/vs-code-extensiton
+
